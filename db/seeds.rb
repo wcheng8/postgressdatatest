@@ -1,8 +1,9 @@
-for i in 1..10
-    Book.create(
-        author: Faker::Book.author,
-        title: Faker::Book.title,
-        publisher: Faker::Book.publisher,
+for i in 1..20
+    Toy.create(
+        name: Faker::Game.title,
+        description: "The genre is #{Faker::Game.genre} and it is a #{Faker::Game.platform}",
+        date: Faker::Date.backward(days: 365),
+        user: Faker::Name.name
     )
 
     puts "Created #{i} records"
