@@ -21,7 +21,7 @@ class FoodsController < ApplicationController
   end
 
   def update
-    Food.update(name: params[:name], calories: params[:calories])
+    Food.update(params[:id], name: params[:name], calories: params[:calories])
     redirect_to food_path(params[:id])
   end
 
