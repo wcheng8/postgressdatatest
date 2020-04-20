@@ -1,0 +1,10 @@
+<h1>Add a New Food!</h1>
+
+<form action="<%= foods_path %>" method="POST">
+  <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+  <label>Food:</label>
+  <input type="text" name="name"><br>
+  <label>Calories:</label>
+  <input type="number" step ="0.1" name="calories"><br>
+  <button>Submit</button>
+</form>

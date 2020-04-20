@@ -8,4 +8,13 @@ for i in 1..20
 
     puts "Created #{i} records"
 end
+
+for i in 1..20
+  Food.create(
+      name: Faker::Food.dish,
+      calories: Faker::Number.number(digits:3),
+  )
+
+  puts "Created #{i} dishes"
+end
 # Book.create(author: 'Germany', title: 81831000)
