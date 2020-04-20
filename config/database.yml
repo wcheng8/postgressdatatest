@@ -22,16 +22,16 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: localhost
   port: 5432
-  username: ENV["PSQL_USER"]
-  password: ENV['PSQL_PASS']
+  username: rails_dev
+  password: EK1833
 
 development:
   <<: *default
   database: celeb_development
   host: localhost
   port: 5432
-  username: ENV["PSQL_USER"]
-  password: ENV['PSQL_PASS']
+  username: rails_dev
+  password: EK1833
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
