@@ -17,4 +17,19 @@ for i in 1..20
 
   puts "Created #{i} dishes"
 end
+
+for i in 1..20
+  Beverage.create(
+      name: Faker::Beer.brand,
+      description: Faker::Beer.name,
+      is_alcoholic: Faker::Boolean.boolean(true_ratio: 0.6)
+  )
+
+  puts "Created #{i} beers"
+end
+
+Celebrity.create(
+  name: Faker::Beer.brand,
+
+)
 # Book.create(author: 'Germany', title: 81831000)
